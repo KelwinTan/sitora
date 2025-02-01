@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 export default function About() {
   const { ref, inView } = useInView({
@@ -34,7 +34,7 @@ export default function About() {
         <motion.div
           ref={ref}
           initial="hidden"
-          animate={inView ? 'visible' : 'hidden'}
+          animate={inView ? "visible" : "hidden"}
           variants={containerVariants}
           className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
         >
@@ -42,7 +42,7 @@ export default function About() {
           <motion.div variants={itemVariants} className="relative">
             <div className="aspect-w-16 aspect-h-9 rounded-xl overflow-hidden">
               <img
-                src="https://via.placeholder.com/800x600"
+                src="/images/about-us.jpg"
                 alt="About Us"
                 className="w-full h-full object-cover"
               />
@@ -55,25 +55,28 @@ export default function About() {
             <h2 className="text-3xl md:text-4xl font-bold">
               We Create Digital Experiences
             </h2>
-            <p className="text-gray-600 dark:text-gray-400">
-              With years of experience in web design and development, we help
-              businesses establish a strong online presence. Our team of experts
-              combines creativity with technical expertise to deliver exceptional
-              results.
+            <p className="text-gray-600 dark:text-gray-400 text-justify">
+              With years of experience in web design and full stack development,
+              we help businesses establish a strong online presence. Our team of
+              experts combines creativity with technical expertise to deliver
+              exceptional results.
             </p>
             <div className="grid grid-cols-2 gap-6">
               <div>
-                <h4 className="text-2xl font-bold text-neon-blue mb-2">100+</h4>
+                <h4 className="text-2xl font-bold text-neon-blue mb-2">20+</h4>
                 <p className="text-gray-600 dark:text-gray-400">
                   Projects Completed
                 </p>
               </div>
               <div>
-                <h4 className="text-2xl font-bold text-neon-purple mb-2">50+</h4>
-                <p className="text-gray-600 dark:text-gray-400">Happy Clients</p>
+                <h4 className="text-2xl font-bold text-neon-purple mb-2">
+                  20+
+                </h4>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Happy Clients
+                </p>
               </div>
             </div>
-            <button className="btn btn-primary">Learn More</button>
           </motion.div>
         </motion.div>
       </div>

@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { HiExternalLink } from 'react-icons/hi';
+import { motion } from "framer-motion";
+import React from "react";
+import { HiExternalLink } from "react-icons/hi";
 
 interface PortfolioItem {
   title: string;
@@ -8,66 +8,73 @@ interface PortfolioItem {
   image: string;
   tags: string[];
   link?: string;
-  category: 'Essential' | 'Professional' | 'Enterprise';
+  category: "Essential" | "Professional" | "Enterprise";
 }
 
 const portfolioItems: PortfolioItem[] = [
   {
     title: "Artisan Café Website",
-    description: "A modern, responsive website for a local café featuring online ordering and reservation system.",
+    description:
+      "A modern, responsive website for a local café featuring online ordering and reservation system.",
     image: "/portfolio/cafe-website.jpg",
     tags: ["React", "Tailwind CSS", "Framer Motion"],
     category: "Professional",
-    link: "#"
+    link: "#",
   },
   {
     title: "Tech Startup Landing Page",
-    description: "High-converting landing page with stunning animations and seamless user experience.",
+    description:
+      "High-converting landing page with stunning animations and seamless user experience.",
     image: "/portfolio/startup-landing.jpg",
     tags: ["Next.js", "TypeScript", "GSAP"],
     category: "Enterprise",
-    link: "#"
+    link: "#",
   },
   {
     title: "Fashion Blog",
-    description: "Minimalist blog design with focus on typography and visual hierarchy.",
+    description:
+      "Minimalist blog design with focus on typography and visual hierarchy.",
     image: "/portfolio/fashion-blog.jpg",
     tags: ["React", "Styled Components"],
     category: "Essential",
-    link: "#"
+    link: "#",
   },
   {
     title: "E-commerce Platform",
-    description: "Full-featured online store with product management and payment integration.",
+    description:
+      "Full-featured online store with product management and payment integration.",
     image: "/portfolio/ecommerce.jpg",
     tags: ["Next.js", "Stripe", "Tailwind CSS"],
     category: "Enterprise",
-    link: "#"
+    link: "#",
   },
   {
     title: "Real Estate Showcase",
-    description: "Property listing website with virtual tour integration and lead generation.",
+    description:
+      "Property listing website with virtual tour integration and lead generation.",
     image: "/portfolio/real-estate.jpg",
     tags: ["React", "Three.js", "Firebase"],
     category: "Professional",
-    link: "#"
+    link: "#",
   },
   {
     title: "Personal Portfolio",
-    description: "Clean and professional portfolio website for a digital artist.",
-    image: "/portfolio/portfolio.jpg",
+    description:
+      "Clean and professional portfolio website for a digital artist.",
+    image: "/images/portfolio.jpg",
     tags: ["React", "Framer Motion"],
     category: "Essential",
-    link: "#"
-  }
+    link: "#",
+  },
 ];
 
 const Portfolio: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = React.useState<string>('all');
+  const [selectedCategory, setSelectedCategory] = React.useState<string>("all");
 
-  const filteredItems = selectedCategory === 'all'
-    ? portfolioItems
-    : portfolioItems.filter(item => item.category === selectedCategory);
+  const filteredItems =
+    selectedCategory === "all"
+      ? portfolioItems
+      : portfolioItems.filter((item) => item.category === selectedCategory);
 
   return (
     <section className="py-20 px-4">
@@ -82,24 +89,27 @@ const Portfolio: React.FC = () => {
             Our Latest Work
           </h2>
           <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Explore our portfolio of successful projects across different industries and complexity levels.
+            Explore our portfolio of successful projects across different
+            industries and complexity levels.
           </p>
         </motion.div>
 
         <div className="flex justify-center gap-4 mb-12">
-          {['all', 'Essential', 'Professional', 'Enterprise'].map((category) => (
-            <button
-              key={category}
-              onClick={() => setSelectedCategory(category)}
-              className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-                selectedCategory === category
-                  ? 'bg-purple-600 text-white'
-                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
-              }`}
-            >
-              {category.charAt(0).toUpperCase() + category.slice(1)}
-            </button>
-          ))}
+          {["all", "Essential", "Professional", "Enterprise"].map(
+            (category) => (
+              <button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+                  selectedCategory === category
+                    ? "bg-purple-600 text-white"
+                    : "bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700"
+                }`}
+              >
+                {category.charAt(0).toUpperCase() + category.slice(1)}
+              </button>
+            )
+          )}
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -119,7 +129,7 @@ const Portfolio: React.FC = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
-              
+
               <div className="p-6">
                 <div className="flex items-center justify-between mb-2">
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white">

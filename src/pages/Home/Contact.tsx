@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { FiMail, FiPhone, FiMapPin } from 'react-icons/fi';
+import { motion } from "framer-motion";
+import { FiMail, FiMapPin, FiPhone } from "react-icons/fi";
+import { useInView } from "react-intersection-observer";
 
 export default function Contact() {
   const { ref, inView } = useInView({
@@ -32,18 +32,18 @@ export default function Contact() {
   const contactInfo = [
     {
       icon: FiMail,
-      title: 'Email',
-      content: 'contact@webdesign.com',
+      title: "Email",
+      content: "lw.kelwin@gmail.com",
     },
     {
       icon: FiPhone,
-      title: 'Phone',
-      content: '+1 (555) 123-4567',
+      title: "Phone",
+      content: "+62 813-3621-4840",
     },
     {
       icon: FiMapPin,
-      title: 'Location',
-      content: 'San Francisco, CA',
+      title: "Location",
+      content: "DKI Jakarta, Indonesia",
     },
   ];
 
@@ -53,12 +53,14 @@ export default function Contact() {
         <motion.div
           ref={ref}
           initial="hidden"
-          animate={inView ? 'visible' : 'hidden'}
+          animate={inView ? "visible" : "hidden"}
           variants={containerVariants}
           className="space-y-12"
         >
           <div className="text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Get in Touch</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Get in Touch
+            </h2>
             <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
               Ready to start your project? Contact us for a free consultation
             </p>
@@ -89,7 +91,9 @@ export default function Contact() {
                   </div>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Email</label>
+                  <label className="block text-sm font-medium mb-2">
+                    Email
+                  </label>
                   <input
                     type="email"
                     className="w-full px-4 py-3 rounded-lg bg-white dark:bg-dark-primary border border-gray-200 dark:border-gray-700 focus:ring-2 focus:ring-neon-blue dark:focus:ring-neon-blue/50 outline-none transition-all"
@@ -114,10 +118,7 @@ export default function Contact() {
             <motion.div variants={itemVariants} className="space-y-8">
               <div className="grid gap-8">
                 {contactInfo.map((info) => (
-                  <div
-                    key={info.title}
-                    className="flex items-start space-x-4"
-                  >
+                  <div key={info.title} className="flex items-start space-x-4">
                     <div className="flex-shrink-0">
                       <info.icon className="w-6 h-6 text-neon-blue" />
                     </div>
@@ -132,16 +133,16 @@ export default function Contact() {
               </div>
 
               {/* Map placeholder */}
-              <div className="aspect-w-16 aspect-h-9 rounded-xl overflow-hidden bg-gray-200 dark:bg-dark-primary">
+              {/* <div className="aspect-w-16 aspect-h-9 rounded-xl overflow-hidden bg-gray-200 dark:bg-dark-primary">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100939.98555098464!2d-122.507640!3d37.757815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan+Francisco%2C+CA!5e0!3m2!1sen!2sus!4v1+"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.123456789012!2d106.845599!3d-6.208763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3c1a1a1a1a1%3A0x4a501367f076adff!2sJakarta%2C+Indonesia!5e0!3m2!1sen!2sus!4v1+"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
                 />
-              </div>
+              </div> */}
             </motion.div>
           </div>
         </motion.div>
