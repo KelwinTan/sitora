@@ -28,31 +28,31 @@ export default function Services() {
 
   const packages: ServicePackage[] = [
     {
-      title: "Essential Package",
+      title: "Basic Package",
       price: "2.999.999",
       description: "Perfect for small businesses and personal websites",
       features: [
-        "Responsive Design",
-        "5 Pages Website",
-        "Contact Form",
-        "Basic SEO Setup",
-        "2 Weeks Delivery",
-        "1 Month Support",
-        "Mobile-First Design",
+        "Attractive Website Design",
+        "Up to 5 pages website",
+        "Basic SEO Optimization",
+        "Up To 2 Weeks Delivery",
+        "Revision up to 2x",
       ],
     },
     {
-      title: "Professional Package",
-      price: "4.999.999",
+      title: "Full Package",
+      price: "5.499.999",
       description: "Ideal for growing businesses",
       isPopular: true,
       features: [
-        "Everything in Essential",
-        "Up to 10 Pages",
+        "Attractive Website Design",
+        "Up to 10 pages website",
         "Advanced SEO Optimization",
-        "Custom Animations",
-        "3 Weeks Delivery",
-        "Performance Optimization",
+        "Up To 2 Weeks Delivery",
+        "Revision up to 4x",
+        "Custom Animation",
+        "Include Your Own Domain and Hosting (example: .id or .com)",
+        "Include Email for up to 50 Accounts",
       ],
     },
     {
@@ -60,7 +60,7 @@ export default function Services() {
       price: "Contact for Pricing",
       description: "Complete solution for large businesses",
       features: [
-        "Everything in Professional",
+        "Everything in Full Package",
         "Unlimited Pages",
         "Custom Backend Development",
         "Advanced Analytics",
@@ -84,9 +84,9 @@ export default function Services() {
     {
       title: "GazeOn.AI",
       description:
-        "A platform for delivering customized AI solutions that address unique business challenges.",
+        "Delivering customized AI solutions that address unique business challenges.",
       imageUrl: "/images/portfolio/gazeonai.png",
-      packageType: "Professional",
+      packageType: "Full",
       technologies: ["Wordpress", "MySQL", "Python"],
       link: "https://gazeonai.com/",
     },

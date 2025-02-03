@@ -42,7 +42,7 @@ export default function About() {
           <motion.div variants={itemVariants} className="relative">
             <div className="aspect-w-16 aspect-h-9 rounded-xl overflow-hidden">
               <img
-                src="/images/about-us.jpg"
+                src="/images/about-us.png"
                 alt="About Us"
                 className="w-full h-full object-cover"
               />
