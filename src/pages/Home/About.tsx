@@ -29,7 +29,10 @@ export default function About() {
   };
 
   return (
-    <section id="about" className="section bg-white dark:bg-dark-primary">
+    <section
+      id="about"
+      className="section bg-gradient-to-t from-blue-900 to-[var(--sitora-primary)]"
+    >
       <div className="container">
         <motion.div
           ref={ref}

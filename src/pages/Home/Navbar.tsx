@@ -10,7 +10,7 @@ export class NavBar extends Component {
 
     return (
       <>
-        <header className="bg-blue-600 text-white p-4">
+        <header className="bg-[#0A66C2] text-white p-4">
           <div className="flex justify-between items-center">
             <h1 className="text-xl font-bold">My Website</h1>{" "}
             <button

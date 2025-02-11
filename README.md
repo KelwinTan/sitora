@@ -1,4 +1,4 @@
-# Modern Web Design Service Website
+# Sitora Website
 
 A high-tech, modern website for a web design service business featuring dark theme support and stunning animations.
 
@@ -12,11 +12,13 @@ A high-tech, modern website for a web design service business featuring dark the
 1. Install Node.js and npm from [https://nodejs.org/](https://nodejs.org/)
 
 2. Install project dependencies:
+
 ```bash
 npm install
 ```
 
 3. Start the development server:
+
 ```bash
 npm run dev
 ```
@@ -60,6 +62,7 @@ src/
 ## Development
 
 This project uses:
+
 - ESLint for code linting
 - Prettier for code formatting
 - PostCSS for CSS processing

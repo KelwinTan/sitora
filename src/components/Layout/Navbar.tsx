@@ -1,16 +1,15 @@
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { FiMenu, FiX } from 'react-icons/fi';
-import Logo from '../shared/Logo';
+import { AnimatePresence, motion } from "framer-motion";
+import { useState } from "react";
+import { FiMenu, FiX } from "react-icons/fi";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [
-    { label: 'Home', href: '#' },
-    { label: 'About', href: '#about' },
-    { label: 'Services', href: '#services' },
-    { label: 'Contact', href: '#contact' },
+    { label: "Home", href: "#" },
+    { label: "About", href: "#about" },
+    { label: "Services", href: "#services" },
+    { label: "Contact", href: "#contact" },
   ];
 
   const menuVariants = {
@@ -33,11 +32,14 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed w-full z-50 bg-gray-900/90 backdrop-blur-sm border-b border-gray-800">
+    <nav className="fixed w-full z-50 bg-[var(--sitora-primary)] backdrop-blur-sm border-b border-gray-800">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex-shrink-0">
-            <Logo />
+            <div className="flex items-center space-x-2">
+              <div className="w-10 h-10 bg-white rounded-full"></div>
+              <span className="text-xl font-bold text-white">SITORA</span>
+            </div>
           </div>
 
           {/* Desktop Menu */}

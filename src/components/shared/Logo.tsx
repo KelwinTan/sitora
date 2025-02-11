@@ -1,5 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
+import React from 'react';
 
 interface LogoProps {
   className?: string;
@@ -178,7 +178,7 @@ const Logo: React.FC<LogoProps> = ({ className = '', animated = true }) => {
           animate={animated ? { opacity: 1, x: 0 } : undefined}
           transition={{ delay: 0.2, duration: 0.5 }}
         >
-          WebCraft
+          Sitora
         </motion.span>
 
         {/* Tagline with typing effect */}
