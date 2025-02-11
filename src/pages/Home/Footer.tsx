@@ -1,14 +1,4 @@
-import React, { useState } from "react";
-
 const Footer = () => {
-  const [email, setEmail] = useState("");
-
-  const handleSubscribe = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Add your subscription logic here
-    console.log("Subscribing email:", email);
-  };
-
   return (
     <footer className="bg-gray-50">
       <div className="mx-auto grid max-w-screen-xl gap-y-8 gap-x-12 px-4 py-10 md:grid-cols-3 xl:grid-cols-3 xl:px-10">
